@@ -1,8 +1,3 @@
-```
-npm install
-npm run dev
-```
+# Blog posts API
 
-```
-npm run deploy
-```
+API for getting info on my blog's posts.
