@@ -5,6 +5,8 @@ const app = new Hono()
 app.get('/get/latest/:count', async (c) =>  {
   const count = c.req.param("count")
   
+  if (count > 10) return c.text("Too many posts (limit 10)", 400)
+
   const posts = await c.env.DB.prepare(
     `
       SELECT *
